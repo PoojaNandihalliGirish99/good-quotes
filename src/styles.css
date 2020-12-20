@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap");
+
 .App {
-  font-family: sans-serif;
+  font-family: "JetBrains Mono", monospace;
   text-align: center;
 }
 h3 {
@@ -9,5 +11,5 @@ h1 {
   color: black;
 }
 body {
-  background-color: crimson;
+  background-color: #ebd295;
 }

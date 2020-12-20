@@ -4,24 +4,42 @@ import "./styles.css";
 var quotesDictionary = {
   You: [
     { quote: "I told the stars about you." },
+    { quote: "Be fearless in the pursuit of what sets your soul on fire." },
     {
       quote:
         "Your greatest responsibility is to love yourself and to know that you are enough."
-    }
+    },
+    { quote: "Be so good that they can't ignore you." }
   ],
   Inspirational: [
     { quote: "Start where you are, use what you have,do what you can." },
     {
       quote:
         "You are braver that you believe, stronger than you seem,smarter than you think."
+    },
+    {
+      quote:
+        "Sometimes we are tested not to show our weaknesses but to discover our strengths."
     }
+  ],
+  Life: [
+    { quote: "You are the artist of your Life." },
+    { quote: "Don't let yesterday take up too much of today." },
+    { quote: "Life is only as good as your Mindset" }
+  ],
+  Smile: [
+    { quote: "Peace begins with a smile." },
+    { quote: "Your one smile makes my day." },
+    { quote: "A smile is the shortest distance between two people." }
+  ],
+  Cute: [
+    { quote: "And when you smile, I can't stop staring." },
+    { quote: "When I look into your eyes, I tend to lose my thoughts." },
+    { quote: "And all that you are is all that I will ever need." }
   ]
 };
 
 var quoteListWeHave = Object.keys(quotesDictionary);
-// quoteListWeHave.forEach(function(newquote){
-//   console.log(newquote);
-// })
 
 export default function App() {
   const [quotesList, setQuoteList] = useState("You");
@@ -44,7 +62,8 @@ export default function App() {
               margin: "0.5rem 0.5rem",
               cursor: "pointer",
               listStyle: "none",
-              borderRadius: "0.5rem"
+              borderRadius: "0.4rem",
+              backgroundColor: "rgb(177, 172, 172)"
             }}
             key={quoteGenre}
           >
@@ -61,15 +80,16 @@ export default function App() {
               style={{
                 listStyle: "none",
                 padding: "1rem",
-                border: "1px solid #D1D5DB",
+                border: "2px solid black",
                 width: "70%",
+                color: "black",
+                fontWeight: "600",
                 margin: "0.5rem auto",
-                borderRadius: "0.5rem",
-                backgroundColor: ""
+                borderRadius: "0.5rem"
               }}
             >
               {" "}
-              <div style={{ fontSize: "larger" }}> {quotes.quote} </div>
+              <div style={{ fontSize: "medium" }}> {quotes.quote} </div>
             </li>
           ))}
         </ul>
